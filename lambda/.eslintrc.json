@@ -1,0 +1,65 @@
+{
+    "extends": "airbnb-base",
+    "env": {
+        "commonjs": true,
+        "node": true,
+        "mocha": true
+    },
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2019
+    },
+    "rules": {  
+        "import/no-extraneous-dependencies": ["warn", {"devDependencies": ["**/test/**/*"]}],              
+        "indent": ["error", 4, {"SwitchCase": 1}],
+        "max-len": "off",
+        "no-else-return": "off",
+        "no-plusplus":"off",
+        "no-underscore-dangle": 0,
+        "no-lonely-if":"off",
+        "no-console": ["error", { "allow": ["log", "error", "warn"] }],
+        "no-bitwise": ["error", { "allow": ["|"] }],
+        "no-restricted-syntax": ["error", "ForInStatement"],
+        "no-param-reassign":"off",
+        "no-continue":"off",
+        "no-new":"off",
+        "no-throw-literal":"off",
+        "no-trailing-spaces": "warn",
+        "no-unused-vars": "off",
+        "padded-blocks": "off",
+        "object-curly-newline": ["error", {
+            "ImportDeclaration": "never",
+            "ExportDeclaration": {
+                "multiline": true,
+                "minProperties": 3
+            }
+        }],
+        "comma-dangle": ["error", {
+            "arrays": "only-multiline",
+            "objects": "only-multiline",
+            "imports": "never",
+            "exports": "never",
+            "functions": "ignore"
+        }],
+        "no-use-before-define": "off",
+        "semi": ["error", "always"],
+        "max-classes-per-file": ["error", 10],
+        "class-methods-use-this":"off",
+        "no-template-curly-in-string":"off",
+        "operator-linebreak":"off",
+        "brace-style":"off",
+        "arrow-body-style":"off"
+    },
+    "overrides": [
+        {
+          "files": ["src/*.js"],
+          "excludedFiles": ["**/testSupport/*.js"],
+          "rules": {
+            "quotes": ["error", "single"]
+          }
+        }
+      ]
+}

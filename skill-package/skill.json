@@ -1,0 +1,20 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "interfaces": [
+          {
+            "type": "ALEXA_PRESENTATION_APL"
+          }
+        ]
+      }
+    },
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "skill-sample-controls-fruit-shop"
+        }
+      }
+    }
+  }
+}

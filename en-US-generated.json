@@ -1,0 +1,1071 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "types": [
+        {
+          "name": "feedback",
+          "values": [
+            {
+              "id": "builtin_affirm",
+              "name": {
+                "value": "affirm",
+                "synonyms": [
+                  "yes I do",
+                  "okay",
+                  "kay",
+                  "k",
+                  "yes",
+                  "yup",
+                  "yep",
+                  "yes",
+                  "ya",
+                  "yes I want",
+                  "yes I need",
+                  "yes I said",
+                  "yes that's right",
+                  "that's correct",
+                  "ah yes",
+                  "affirmative",
+                  "makes sense",
+                  "right",
+                  "sounds good",
+                  "sure",
+                  "that's right",
+                  "totally",
+                  "works for me",
+                  "yeah",
+                  "yeah ok",
+                  "yes ok",
+                  "yes that's good",
+                  "yes sure",
+                  "yes good",
+                  "yes exactly",
+                  "exactly",
+                  "yes I do",
+                  "absolutely",
+                  "yes absolutely",
+                  "fine",
+                  "yes fine"
+                ]
+              }
+            },
+            {
+              "id": "builtin_disaffirm",
+              "name": {
+                "value": "disaffirm",
+                "synonyms": [
+                  "no",
+                  "no no",
+                  "no no no",
+                  "no no no no",
+                  "no I want",
+                  "no I said",
+                  "no not that",
+                  "not even close",
+                  "nope",
+                  "incorrect",
+                  "you misunderstood",
+                  "you have it wrong",
+                  "that's wrong",
+                  "thats wrong",
+                  "wrong",
+                  "absolutely not",
+                  "I don't think so",
+                  "naw",
+                  "naw",
+                  "negative",
+                  "never",
+                  "no alexa",
+                  "no amazon",
+                  "no incorrect",
+                  "no that's wrong",
+                  "no it's not",
+                  "definitely not",
+                  "no definitely not",
+                  "not ever",
+                  "oh no",
+                  "ohh no",
+                  "o no no",
+                  "please no",
+                  "that's not what I want",
+                  "that was totally wrong",
+                  "that is totally wrong",
+                  "that is wrong"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "head",
+          "values": [
+            {
+              "id": "builtin_head",
+              "name": {
+                "value": "head",
+                "synonyms": [
+                  "I",
+                  "I'll",
+                  "please",
+                  "thanks",
+                  "thank you",
+                  "I will",
+                  "I want",
+                  "I choose",
+                  "I want you to",
+                  "I want you to just",
+                  "I need",
+                  "I need you to",
+                  "I need you to just",
+                  "I think",
+                  "I think just",
+                  "I think I want",
+                  "I think I need",
+                  "I think you can",
+                  "I think you can just",
+                  "I think that",
+                  "I'm pretty sure",
+                  "I'm pretty sure that",
+                  "I am pretty sure",
+                  "I am pretty sure that",
+                  "I believe",
+                  "I believe that",
+                  "You can",
+                  "You can just",
+                  "You can just go ahead and",
+                  "You should",
+                  "You should just",
+                  "Just",
+                  "Go ahead and",
+                  "Just go ahead",
+                  "Just go ahead and"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "tail",
+          "values": [
+            {
+              "id": "builtin_tail",
+              "name": {
+                "value": "tail",
+                "synonyms": [
+                  "please",
+                  "thanks",
+                  "please thanks",
+                  "will be fine",
+                  "will be fine thanks",
+                  "is good",
+                  "is good thanks",
+                  "will be good",
+                  "will be good thanks",
+                  "is plenty",
+                  "is plenty thanks",
+                  "will be plenty",
+                  "will be plenty thanks",
+                  "is great",
+                  "is great thanks",
+                  "will be great",
+                  "will be great thanks",
+                  "will work",
+                  "will work thanks",
+                  "is correct",
+                  "is correct thanks",
+                  "is right",
+                  "is right thanks",
+                  "at a time"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "action",
+          "values": [
+            {
+              "id": "builtin_set",
+              "name": {
+                "value": "set",
+                "synonyms": [
+                  "set",
+                  "assign",
+                  "make",
+                  "will be",
+                  "must be",
+                  "must be set to",
+                  "must be equal to",
+                  "should be",
+                  "should be",
+                  "should be set to",
+                  "should be equal to",
+                  "needs to be",
+                  "needs to be set to"
+                ]
+              }
+            },
+            {
+              "id": "builtin_change",
+              "name": {
+                "value": "change",
+                "synonyms": [
+                  "update",
+                  "move",
+                  "alter",
+                  "change",
+                  "switch",
+                  "should be",
+                  "should be changed to",
+                  "should be changed",
+                  "should be updated to",
+                  "should be updated",
+                  "should be altered to",
+                  "should be altered",
+                  "needs to be changed to",
+                  "needs to be changed",
+                  "needs to be updated to",
+                  "needs to be updated",
+                  "needs to be altered to",
+                  "needs to be altered"
+                ]
+              }
+            },
+            {
+              "id": "builtin_select",
+              "name": {
+                "value": "select",
+                "synonyms": [
+                  "select",
+                  "choose",
+                  "take",
+                  "pick"
+                ]
+              }
+            },
+            {
+              "id": "add",
+              "name": {
+                "value": "add",
+                "synonyms": [
+                  "add",
+                  "add more",
+                  "add some"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "target",
+          "values": [
+            {
+              "id": "builtin_it",
+              "name": {
+                "value": "it",
+                "synonyms": [
+                  "it",
+                  "this",
+                  "that"
+                ]
+              }
+            },
+            {
+              "id": "category",
+              "name": {
+                "value": "category",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "product",
+              "name": {
+                "value": "product",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "count",
+              "name": {
+                "value": "count",
+                "synonyms": [
+                  "item count",
+                  "number of items"
+                ]
+              }
+            },
+            {
+              "id": "deliveryDate",
+              "name": {
+                "value": "deliveryDate",
+                "synonyms": [
+                  "delivery date",
+                  "date to deliver"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "preposition",
+          "values": [
+            {
+              "id": "builtin_preposition",
+              "name": {
+                "value": "preposition",
+                "synonyms": [
+                  "the",
+                  "to",
+                  "to the",
+                  "to be",
+                  "to go",
+                  "in",
+                  "in to",
+                  "into",
+                  "is",
+                  "equal to",
+                  "to be equal to",
+                  "also",
+                  "to also be",
+                  "to be also",
+                  "from",
+                  "until"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Category",
+          "values": [
+            {
+              "id": "fruit",
+              "name": {
+                "value": "fruit",
+                "synonyms": [
+                  "fruits"
+                ]
+              }
+            },
+            {
+              "id": "vegetable",
+              "name": {
+                "value": "vegetable",
+                "synonyms": [
+                  "vegetables",
+                  "veges",
+                  "veggies",
+                  "veg"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Product",
+          "values": [
+            {
+              "id": "apple",
+              "name": {
+                "value": "apple",
+                "synonyms": [
+                  "apples"
+                ]
+              }
+            },
+            {
+              "id": "banana",
+              "name": {
+                "value": "banana",
+                "synonyms": [
+                  "bananas"
+                ]
+              }
+            },
+            {
+              "id": "orange",
+              "name": {
+                "value": "orange",
+                "synonyms": [
+                  "oranges"
+                ]
+              }
+            },
+            {
+              "id": "mandarin",
+              "name": {
+                "value": "mandarin",
+                "synonyms": [
+                  "oranges"
+                ]
+              }
+            },
+            {
+              "id": "pineapple",
+              "name": {
+                "value": "pineapple",
+                "synonyms": [
+                  "pineapples"
+                ]
+              }
+            },
+            {
+              "id": "tomato",
+              "name": {
+                "value": "tomato",
+                "synonyms": [
+                  "tomatoes"
+                ]
+              }
+            },
+            {
+              "id": "carrot",
+              "name": {
+                "value": "carrot",
+                "synonyms": [
+                  "carrots"
+                ]
+              }
+            },
+            {
+              "id": "squash",
+              "name": {
+                "value": "squash",
+                "synonyms": [
+                  "squashes"
+                ]
+              }
+            },
+            {
+              "id": "pumpkin",
+              "name": {
+                "value": "pumpkin",
+                "synonyms": [
+                  "pumpkins"
+                ]
+              }
+            },
+            {
+              "id": "lettuce",
+              "name": {
+                "value": "lettuce",
+                "synonyms": [
+                  "lettuces"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "cart",
+          "values": [
+            {
+              "id": "cart",
+              "name": {
+                "value": "cart",
+                "synonyms": [
+                  "the cart",
+                  "my cart",
+                  "shopping cart",
+                  "the shopping cart",
+                  "my shopping cart",
+                  "bag",
+                  "the bag",
+                  "my bag",
+                  "shopping bag",
+                  "the shopping bag",
+                  "my shopping bag",
+                  "list",
+                  "the list",
+                  "my list",
+                  "shopping list",
+                  "the shopping list",
+                  "my shopping list"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "intents": [
+        {
+          "name": "GeneralControlIntent",
+          "slots": [
+            {
+              "name": "feedback",
+              "type": "feedback"
+            },
+            {
+              "name": "action",
+              "type": "action"
+            },
+            {
+              "name": "target",
+              "type": "target"
+            },
+            {
+              "name": "head",
+              "type": "head"
+            },
+            {
+              "name": "tail",
+              "type": "tail"
+            }
+          ],
+          "samples": [
+            "{feedback} {action}",
+            "{feedback} {action} {target}",
+            "{feedback} {tail}",
+            "{feedback} {action} {tail}",
+            "{feedback} {action} {target} {tail}",
+            "{action} {target}",
+            "{head} {action}",
+            "{head} {action} {target}",
+            "{action} {tail}",
+            "{action} {target} {tail}",
+            "{head} {action} {tail}",
+            "{head} {action} {target} {tail}"
+          ]
+        },
+        {
+          "name": "Category_ValueControlIntent",
+          "slots": [
+            {
+              "name": "feedback",
+              "type": "feedback"
+            },
+            {
+              "name": "action",
+              "type": "action"
+            },
+            {
+              "name": "target",
+              "type": "target"
+            },
+            {
+              "name": "preposition",
+              "type": "preposition"
+            },
+            {
+              "name": "head",
+              "type": "head"
+            },
+            {
+              "name": "tail",
+              "type": "tail"
+            },
+            {
+              "name": "Category",
+              "type": "Category"
+            }
+          ],
+          "samples": [
+            "{Category}",
+            "{action} {Category}",
+            "{action} {preposition} {Category}",
+            "{action} {target} {preposition} {Category}",
+            "{target} {preposition} {Category}",
+            "{feedback} {Category}",
+            "{feedback} {action} {Category}",
+            "{feedback} {preposition} {Category}",
+            "{feedback} {action} {preposition} {Category}",
+            "{feedback} {action} {target} {preposition} {Category}",
+            "{feedback} {target} {preposition} {Category}",
+            "{head} {Category}",
+            "{head} {action} {Category}",
+            "{head} {action} {preposition} {Category}",
+            "{head} {action} {target} {preposition} {Category}",
+            "{head} {target} {preposition} {Category}",
+            "{Category} {tail}",
+            "{preposition} {Category} {tail}",
+            "{action} {preposition} {Category} {tail}",
+            "{action} {target} {preposition} {Category} {tail}",
+            "{target} {preposition} {Category} {tail}",
+            "{feedback} {Category} {tail}",
+            "{feedback} {preposition} {Category} {tail}",
+            "{feedback} {action} {Category} {tail}",
+            "{feedback} {action} {preposition} {Category} {tail}",
+            "{feedback} {action} {target} {preposition} {Category} {tail}",
+            "{feedback} {target} {preposition} {Category} {tail}",
+            "{head} {Category} {tail}",
+            "{head} {preposition} {Category} {tail}",
+            "{head} {action} {Category} {tail}",
+            "{head} {action} {preposition} {Category} {tail}",
+            "{head} {target} {preposition} {Category} {tail}",
+            "{head} {action} {target} {preposition} {Category} {tail}"
+          ]
+        },
+        {
+          "name": "OrdinalControlIntent",
+          "slots": [
+            {
+              "name": "feedback",
+              "type": "feedback"
+            },
+            {
+              "name": "action",
+              "type": "action"
+            },
+            {
+              "name": "target",
+              "type": "target"
+            },
+            {
+              "name": "AMAZON.Ordinal",
+              "type": "AMAZON.Ordinal"
+            },
+            {
+              "name": "preposition",
+              "type": "preposition"
+            },
+            {
+              "name": "head",
+              "type": "head"
+            },
+            {
+              "name": "tail",
+              "type": "tail"
+            }
+          ],
+          "samples": [
+            "{AMAZON.Ordinal}",
+            "{preposition} {AMAZON.Ordinal}",
+            "{AMAZON.Ordinal} one",
+            "{preposition} {AMAZON.Ordinal} one",
+            "{action} {AMAZON.Ordinal}",
+            "{action} {preposition} {AMAZON.Ordinal}",
+            "{action} {preposition} {AMAZON.Ordinal} one",
+            "{action} {target} {preposition} {AMAZON.Ordinal}",
+            "{target} {preposition} {AMAZON.Ordinal}",
+            "{feedback} {AMAZON.Ordinal}",
+            "{feedback} {preposition} {AMAZON.Ordinal}",
+            "{feedback} {AMAZON.Ordinal} one",
+            "{feedback} {preposition} {AMAZON.Ordinal} one",
+            "{feedback} {action} {AMAZON.Ordinal}",
+            "{feedback} {action} {preposition} {AMAZON.Ordinal}",
+            "{feedback} {action} {preposition} {AMAZON.Ordinal} one",
+            "{feedback} {action} {target} {preposition} {AMAZON.Ordinal}",
+            "{feedback} {target} {preposition} {AMAZON.Ordinal}",
+            "{head} {preposition} {AMAZON.Ordinal}",
+            "{head} {preposition} {AMAZON.Ordinal} one",
+            "{head} {action} {preposition} {AMAZON.Ordinal}",
+            "{head} {action} {target} {preposition} {AMAZON.Ordinal}",
+            "{head} {target} {preposition} {AMAZON.Ordinal}",
+            "{AMAZON.Ordinal} {tail}",
+            "{preposition} {AMAZON.Ordinal} {tail}",
+            "{AMAZON.Ordinal} one {tail}",
+            "{preposition} {AMAZON.Ordinal} one {tail}",
+            "{action} {AMAZON.Ordinal} {tail}",
+            "{action} {target} {preposition} {AMAZON.Ordinal} {tail}",
+            "{target} {preposition} {AMAZON.Ordinal} {tail}",
+            "{feedback} {AMAZON.Ordinal} {tail}",
+            "{feedback} {preposition} {AMAZON.Ordinal} {tail}",
+            "{feedback} {AMAZON.Ordinal} one {tail}",
+            "{feedback} {preposition} {AMAZON.Ordinal} one {tail}",
+            "{feedback} {action} {AMAZON.Ordinal} {tail}",
+            "{feedback} {action} {preposition} {AMAZON.Ordinal} {tail}",
+            "{feedback} {action} {preposition} {AMAZON.Ordinal} one {tail}",
+            "{feedback} {action} {target} {preposition} {AMAZON.Ordinal} {tail}",
+            "{feedback} {target} {preposition} {AMAZON.Ordinal} {tail}",
+            "{head} {AMAZON.Ordinal} {tail}",
+            "{head} {preposition} {AMAZON.Ordinal} {tail}",
+            "{head} {preposition} {AMAZON.Ordinal} one {tail}",
+            "{head} {action} {preposition} {AMAZON.Ordinal} {tail}",
+            "{head} {action} {preposition} {AMAZON.Ordinal} one {tail}",
+            "{head} {target} {preposition} {AMAZON.Ordinal} {tail}",
+            "{head} {action} {target} {preposition} {AMAZON.Ordinal} {tail}"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent"
+        },
+        {
+          "name": "AMAZON.NoIntent"
+        },
+        {
+          "name": "Product_ValueControlIntent",
+          "slots": [
+            {
+              "name": "feedback",
+              "type": "feedback"
+            },
+            {
+              "name": "action",
+              "type": "action"
+            },
+            {
+              "name": "target",
+              "type": "target"
+            },
+            {
+              "name": "preposition",
+              "type": "preposition"
+            },
+            {
+              "name": "head",
+              "type": "head"
+            },
+            {
+              "name": "tail",
+              "type": "tail"
+            },
+            {
+              "name": "Product",
+              "type": "Product"
+            }
+          ],
+          "samples": [
+            "{Product}",
+            "{action} {Product}",
+            "{action} {preposition} {Product}",
+            "{action} {target} {preposition} {Product}",
+            "{target} {preposition} {Product}",
+            "{feedback} {Product}",
+            "{feedback} {action} {Product}",
+            "{feedback} {preposition} {Product}",
+            "{feedback} {action} {preposition} {Product}",
+            "{feedback} {action} {target} {preposition} {Product}",
+            "{feedback} {target} {preposition} {Product}",
+            "{head} {Product}",
+            "{head} {action} {Product}",
+            "{head} {action} {preposition} {Product}",
+            "{head} {action} {target} {preposition} {Product}",
+            "{head} {target} {preposition} {Product}",
+            "{Product} {tail}",
+            "{preposition} {Product} {tail}",
+            "{action} {preposition} {Product} {tail}",
+            "{action} {target} {preposition} {Product} {tail}",
+            "{target} {preposition} {Product} {tail}",
+            "{feedback} {Product} {tail}",
+            "{feedback} {preposition} {Product} {tail}",
+            "{feedback} {action} {Product} {tail}",
+            "{feedback} {action} {preposition} {Product} {tail}",
+            "{feedback} {action} {target} {preposition} {Product} {tail}",
+            "{feedback} {target} {preposition} {Product} {tail}",
+            "{head} {Product} {tail}",
+            "{head} {preposition} {Product} {tail}",
+            "{head} {action} {Product} {tail}",
+            "{head} {action} {preposition} {Product} {tail}",
+            "{head} {target} {preposition} {Product} {tail}",
+            "{head} {action} {target} {preposition} {Product} {tail}"
+          ]
+        },
+        {
+          "name": "AMAZON_NUMBER_ValueControlIntent",
+          "slots": [
+            {
+              "name": "feedback",
+              "type": "feedback"
+            },
+            {
+              "name": "action",
+              "type": "action"
+            },
+            {
+              "name": "target",
+              "type": "target"
+            },
+            {
+              "name": "preposition",
+              "type": "preposition"
+            },
+            {
+              "name": "head",
+              "type": "head"
+            },
+            {
+              "name": "tail",
+              "type": "tail"
+            },
+            {
+              "name": "AMAZON.NUMBER",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{AMAZON.NUMBER}",
+            "{action} {AMAZON.NUMBER}",
+            "{action} {preposition} {AMAZON.NUMBER}",
+            "{action} {target} {preposition} {AMAZON.NUMBER}",
+            "{target} {preposition} {AMAZON.NUMBER}",
+            "{feedback} {AMAZON.NUMBER}",
+            "{feedback} {action} {AMAZON.NUMBER}",
+            "{feedback} {preposition} {AMAZON.NUMBER}",
+            "{feedback} {action} {preposition} {AMAZON.NUMBER}",
+            "{feedback} {action} {target} {preposition} {AMAZON.NUMBER}",
+            "{feedback} {target} {preposition} {AMAZON.NUMBER}",
+            "{head} {AMAZON.NUMBER}",
+            "{head} {action} {AMAZON.NUMBER}",
+            "{head} {action} {preposition} {AMAZON.NUMBER}",
+            "{head} {action} {target} {preposition} {AMAZON.NUMBER}",
+            "{head} {target} {preposition} {AMAZON.NUMBER}",
+            "{AMAZON.NUMBER} {tail}",
+            "{preposition} {AMAZON.NUMBER} {tail}",
+            "{action} {preposition} {AMAZON.NUMBER} {tail}",
+            "{action} {target} {preposition} {AMAZON.NUMBER} {tail}",
+            "{target} {preposition} {AMAZON.NUMBER} {tail}",
+            "{feedback} {AMAZON.NUMBER} {tail}",
+            "{feedback} {preposition} {AMAZON.NUMBER} {tail}",
+            "{feedback} {action} {AMAZON.NUMBER} {tail}",
+            "{feedback} {action} {preposition} {AMAZON.NUMBER} {tail}",
+            "{feedback} {action} {target} {preposition} {AMAZON.NUMBER} {tail}",
+            "{feedback} {target} {preposition} {AMAZON.NUMBER} {tail}",
+            "{head} {AMAZON.NUMBER} {tail}",
+            "{head} {preposition} {AMAZON.NUMBER} {tail}",
+            "{head} {action} {AMAZON.NUMBER} {tail}",
+            "{head} {action} {preposition} {AMAZON.NUMBER} {tail}",
+            "{head} {target} {preposition} {AMAZON.NUMBER} {tail}",
+            "{head} {action} {target} {preposition} {AMAZON.NUMBER} {tail}"
+          ]
+        },
+        {
+          "name": "AMAZON_DATE_ValueControlIntent",
+          "slots": [
+            {
+              "name": "feedback",
+              "type": "feedback"
+            },
+            {
+              "name": "action",
+              "type": "action"
+            },
+            {
+              "name": "target",
+              "type": "target"
+            },
+            {
+              "name": "preposition",
+              "type": "preposition"
+            },
+            {
+              "name": "head",
+              "type": "head"
+            },
+            {
+              "name": "tail",
+              "type": "tail"
+            },
+            {
+              "name": "AMAZON.DATE",
+              "type": "AMAZON.DATE"
+            }
+          ],
+          "samples": [
+            "{AMAZON.DATE}",
+            "{action} {AMAZON.DATE}",
+            "{action} {preposition} {AMAZON.DATE}",
+            "{action} {target} {preposition} {AMAZON.DATE}",
+            "{target} {preposition} {AMAZON.DATE}",
+            "{feedback} {AMAZON.DATE}",
+            "{feedback} {action} {AMAZON.DATE}",
+            "{feedback} {preposition} {AMAZON.DATE}",
+            "{feedback} {action} {preposition} {AMAZON.DATE}",
+            "{feedback} {action} {target} {preposition} {AMAZON.DATE}",
+            "{feedback} {target} {preposition} {AMAZON.DATE}",
+            "{head} {AMAZON.DATE}",
+            "{head} {action} {AMAZON.DATE}",
+            "{head} {action} {preposition} {AMAZON.DATE}",
+            "{head} {action} {target} {preposition} {AMAZON.DATE}",
+            "{head} {target} {preposition} {AMAZON.DATE}",
+            "{AMAZON.DATE} {tail}",
+            "{preposition} {AMAZON.DATE} {tail}",
+            "{action} {preposition} {AMAZON.DATE} {tail}",
+            "{action} {target} {preposition} {AMAZON.DATE} {tail}",
+            "{target} {preposition} {AMAZON.DATE} {tail}",
+            "{feedback} {AMAZON.DATE} {tail}",
+            "{feedback} {preposition} {AMAZON.DATE} {tail}",
+            "{feedback} {action} {AMAZON.DATE} {tail}",
+            "{feedback} {action} {preposition} {AMAZON.DATE} {tail}",
+            "{feedback} {action} {target} {preposition} {AMAZON.DATE} {tail}",
+            "{feedback} {target} {preposition} {AMAZON.DATE} {tail}",
+            "{head} {AMAZON.DATE} {tail}",
+            "{head} {preposition} {AMAZON.DATE} {tail}",
+            "{head} {action} {AMAZON.DATE} {tail}",
+            "{head} {action} {preposition} {AMAZON.DATE} {tail}",
+            "{head} {target} {preposition} {AMAZON.DATE} {tail}",
+            "{head} {action} {target} {preposition} {AMAZON.DATE} {tail}"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent"
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent"
+        },
+        {
+          "name": "AMAZON.HelpIntent"
+        },
+        {
+          "name": "AMAZON.CancelIntent"
+        },
+        {
+          "name": "AMAZON.MoreIntent"
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent"
+        },
+        {
+          "name": "AMAZON.PageUpIntent"
+        },
+        {
+          "name": "AMAZON.PageDownIntent"
+        },
+        {
+          "name": "AMAZON.PreviousIntent"
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent"
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent"
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent"
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent"
+        },
+        {
+          "name": "AMAZON.FallbackIntent"
+        },
+        {
+          "name": "CheckCartIntent",
+          "slots": [
+            {
+              "name": "cart",
+              "type": "cart"
+            }
+          ],
+          "samples": [
+            "what items do I have",
+            "what is in {cart}",
+            "what's in {cart}",
+            "review",
+            "check {cart}",
+            "check {cart} items",
+            "review {cart}"
+          ]
+        },
+        {
+          "name": "AddItemIntent",
+          "slots": [
+            {
+              "name": "action",
+              "type": "action"
+            },
+            {
+              "name": "product",
+              "type": "Product"
+            },
+            {
+              "name": "count",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "cart",
+              "type": "cart"
+            }
+          ],
+          "samples": [
+            "{action} {count} {product}",
+            "{action} {count} {product} to {cart}",
+            "{action} {count} {product} in {cart}",
+            "{count} {product}"
+          ]
+        },
+        {
+          "name": "AddProductIntent",
+          "slots": [
+            {
+              "name": "action",
+              "type": "action"
+            },
+            {
+              "name": "product",
+              "type": "Product",
+              "multipleValues": {
+                "enabled": true
+              }
+            },
+            {
+              "name": "preposition",
+              "type": "preposition"
+            },
+            {
+              "name": "target",
+              "type": "target"
+            },
+            {
+              "name": "head",
+              "type": "head"
+            },
+            {
+              "name": "tail",
+              "type": "tail"
+            }
+          ],
+          "samples": [
+            "{action} {product} {preposition} {target}",
+            "{action} {product}",
+            "{head} {action} {product}",
+            "{action} {product} {tail}",
+            "{head} {action} {product} {tail}"
+          ]
+        }
+      ],
+      "invocationName": "fruit shop"
+    },
+    "prompts": [
+      {
+        "id": "Slot.Validation.564246223579.1467418044248.678461230495",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "This prompt is included to ensure there is a dialog model present. It is not used by skills."
+          }
+        ]
+      }
+    ],
+    "dialog": {
+      "intents": [
+        {
+          "name": "GeneralControlIntent",
+          "slots": [
+            {
+              "name": "feedback",
+              "type": "feedback"
+            },
+            {
+              "name": "action",
+              "type": "action"
+            },
+            {
+              "name": "target",
+              "type": "target",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "validations": [
+                {
+                  "type": "isNotInSet",
+                  "prompt": "Slot.Validation.564246223579.1467418044248.678461230495",
+                  "values": [
+                    "This prompt is included to ensure there is a dialog model present. It is not used by skills."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "head",
+              "type": "head"
+            },
+            {
+              "name": "tail",
+              "type": "tail"
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        }
+      ]
+    }
+  }
+}

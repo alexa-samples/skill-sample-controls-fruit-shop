@@ -1,0 +1,15 @@
+//This minimal tsconfig provides additional IDE support
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "checkJs": true,
+        "noEmit": true
+    },
+    "include": [
+        "src",
+        "test"
+    ]
+}

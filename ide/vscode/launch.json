@@ -1,0 +1,54 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Model Builder",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/lambda/src/build_interaction_model.js",
+            "args": [
+                "--require",
+                "source-map-support/register"
+            ],
+            "env": {
+                "DEBUG": "error:*, warn:*, info:*, debug:*"
+            },
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "runtimeArgs": [
+                "--preserve-symlinks"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Tests",
+            "program": "${workspaceFolder}/lambda/node_modules/mocha/bin/_mocha",
+            "args": [
+                "-u",
+                "tdd",
+                "--require",
+                "source-map-support/register",
+                "--timeout",
+                "999999",
+                "--colors",
+                "\"${workspaceFolder}/lambda/test/**/*.js\""
+            ],
+            "env": {
+                "DEBUG": "error:*, warn:*, info:*, debug:*"
+            },
+            "showAsyncStacks": true,
+            "smartStep": true,
+            "skipFiles": [
+                "node_modules/**",
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
