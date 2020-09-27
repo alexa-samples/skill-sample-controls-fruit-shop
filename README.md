@@ -9,11 +9,15 @@ The front end is the voice interface, or VUI.
 The voice interface is configured through the voice interaction model.
 The back end is where the logic of your skill resides.
 
-## Three Options for Skill Setup
+## Two Options for Skill Setup
 There are a number of different ways for you to setup your skill, depending on your experience and what tools you have available.
 
  * If this is your first skill, choose the [Alexa-Hosted backend instructions](./instructions/setup-vui-alexa-hosted.md) to get started quickly.
  * Developers with the ASK Command Line Interface configured may follow the [ASK CLI instructions](./instructions/cli.md).
+ 
+## Skill Guide
+
+Explore this Fruit Shop skill in detail by reviewing our [user guide](https://github.com/alexa/ask-sdk-controls/blob/develop/doc/userGuide.md#4-exploring-the-fruitshop-demo-skill).
 
 ---
 
