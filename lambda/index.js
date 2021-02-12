@@ -13,11 +13,12 @@
 
 const { SkillBuilders, getLocale } = require('ask-sdk-core');
 const { getSupportedInterfaces } = require('ask-sdk-core');
-const { ControlManager, ControlResponseBuilder, renderActsInSequence, ControlResult, ControlInput, Control, ControlHandler } = require('ask-sdk-controls');
+const { ControlManager, ControlResponseBuilder, renderActsInSequence, ControlResult, ControlInput, Control, ControlHandler, Logger } = require('ask-sdk-controls');
 const { generateDefaultScreenDocument } = require('./src/defaultScreenAPL');
 const { FruitShopControl } = require('./src/FruitShopControl');
-
 const { updateI18n } = require('./src/i18n');
+
+const log = new Logger('FruitShopJS:FruitShopControlManager');
 
 /**
  * ControlManager for the skill.
@@ -76,7 +77,7 @@ class FruitShopControlManager extends ControlManager {
          * Add a default APL template if nothing is actively using the display.
          */
         if (!responseBuilder.isDisplayUsed()) {
-            console.log('ShowDefaultScreenAct: rendering...');
+            log.info('ShowDefaultScreenAct: rendering...');
             if (getSupportedInterfaces(input.handlerInput.requestEnvelope)['Alexa.Presentation.APL']) {
                 const aplDataSource = {
                     data: {

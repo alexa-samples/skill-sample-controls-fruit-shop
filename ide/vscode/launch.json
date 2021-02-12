@@ -37,7 +37,7 @@
                 "--timeout",
                 "999999",
                 "--colors",
-                "\"${workspaceFolder}/lambda/test/**/*.js\""
+                "${workspaceFolder}/lambda/test/*.js"
             ],
             "env": {
                 "DEBUG": "error:*, warn:*, info:*, debug:*"
