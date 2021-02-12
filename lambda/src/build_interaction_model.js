@@ -20,7 +20,6 @@ const log = new Logger('FruitShopJS:InteractionModel');
 // or perhaps we could offer things like .ensureRequiredIntentsForAPL()
 
 new ControlInteractionModelGenerator()
-    .buildCoreModelForControls(new FruitShopControlManager())
     .withInvocationName('fruit shop')
 
     // Mandatory intents
@@ -226,25 +225,7 @@ new ControlInteractionModelGenerator()
             ]
         }
     })
-
-    .addOrMergeSlotTypes(
-        {
-            name: 'action',
-            values: [
-                {
-                    id: 'add',
-                    name: {
-                        value: 'add',
-                        synonyms: [
-                            'add',
-                            'add more',
-                            'add some',
-                        ]
-                    }
-                }
-            ]
-        }
-    )
+    .buildCoreModelForControls(new FruitShopControlManager())
     .buildAndWrite('en-US-generated.json');
 
 log.info('done');

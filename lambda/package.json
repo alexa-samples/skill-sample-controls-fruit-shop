@@ -4,14 +4,14 @@
     "description": "Fruit Shop Demonstration Skill",
     "main": "index.js",
     "scripts": {
-        "test": "node_modules/mocha/bin/_mocha \"test/test.js\"",
+        "test": "node_modules/mocha/bin/_mocha test/test.js",
         "reinstall": "rm -rf ./node_modules && npm install",
         "lint": "eslint 'src/**/*.{js,ts,tsx}' 'test/**/*.{js,ts,tsx}'"
     },
     "dependencies": {
         "ask-sdk-core": "^2.8.0",
         "ask-sdk-model": "^1.28.0",
-        "ask-sdk-controls": "^0.2.0",
+        "ask-sdk-controls": "^0.5.1",
         "i18next": "^15.0.5",
         "lodash": "^4.17.15"
     },

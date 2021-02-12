@@ -17,7 +17,7 @@
  * The localization interceptor in index.js initializes the i18n object with the user's locale.
  */
 
-const { ControlHandler, GeneralControlIntent, SingleValueControlIntent, Strings, AmazonIntent,
+const { ControlHandler, GeneralControlIntent, ValueControlIntent, Strings, AmazonIntent,
     waitForDebugger, TestInput, SkillTester, IntentBuilder, AmazonBuiltInSlotType } = require('ask-sdk-controls');
 const { before, after, describe, test } = require('mocha');
 const sinon = require('sinon');
@@ -38,12 +38,12 @@ async function chooseApples(tester) {
     );
 
     await tester.testTurn(
-        'U: fruit', TestInput.intent(SingleValueControlIntent.of('Category', { Category: 'fruit' })),
+        'U: fruit', TestInput.intent(ValueControlIntent.of('Category', { Category: 'fruit' })),
         'A: Some of our favorite fruits are apples, bananas and oranges. Which would you like?'
     );
 
     await tester.testTurn(
-        'U: apples', TestInput.intent(SingleValueControlIntent.of('Product', { Product: 'apple' })),
+        'U: apples', TestInput.intent(ValueControlIntent.of('Product', { Product: 'apple' })),
         'A: How many apples?'
     );
 }
@@ -55,7 +55,7 @@ async function addOneApple(tester) {
     await chooseApples(tester);
 
     await tester.testTurn(
-        'U: one', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '1' })),
+        'U: one', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '1' })),
         'A: OK. Added 1 apple. Would you like to add another item?'
     );
 }
@@ -104,7 +104,7 @@ describe('all', () => {
             );
 
             await tester.testTurn(
-                'U: meat', TestInput.intent(SingleValueControlIntent.of('Category', { Category: 'meat' })),
+                'U: meat', TestInput.intent(ValueControlIntent.of('Category', { Category: 'meat' })),
                 'A: Sorry, I don\'t know that product category. What would you like?'
             );
         });
@@ -119,7 +119,7 @@ describe('all', () => {
             await addOneAppleAndProceedToDeliveryStep(tester);
 
             await tester.testTurn(
-                'U: tuesday', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.DATE, { 'AMAZON.DATE': '2019-01-08' })),
+                'U: tuesday', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.DATE, { 'AMAZON.DATE': '2019-01-08' })),
                 'A: Delivery will be on 2019-01-08.'
             );
         });
@@ -141,7 +141,7 @@ describe('all', () => {
             const tester = new SkillTester(new ControlHandler(new FruitShopControlManager()));
             await chooseApples(tester);
             await tester.testTurn(
-                'U: zero', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '0' })),
+                'U: zero', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '0' })),
                 'A: Sorry I can only accept orders of one to one hundred items. How many apples?'
             );
         });
@@ -156,12 +156,12 @@ describe('all', () => {
             );
 
             await tester.testTurn(
-                'U: apples', TestInput.intent(SingleValueControlIntent.of('Product', { Product: 'apple' })),
+                'U: apples', TestInput.intent(ValueControlIntent.of('Product', { Product: 'apple' })),
                 'A: How many apples?'
             );
 
             await tester.testTurn(
-                'U: one', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '1' })),
+                'U: one', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '1' })),
                 'A: OK. Added 1 apple. Would you like to add another item?'
             );
 
@@ -171,7 +171,7 @@ describe('all', () => {
             );
 
             await tester.testTurn(
-                'U: tuesday', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.DATE, { 'AMAZON.DATE': '2019-01-08' })),
+                'U: tuesday', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.DATE, { 'AMAZON.DATE': '2019-01-08' })),
                 'A: Delivery will be on 2019-01-08.'
             );
         });
@@ -182,12 +182,12 @@ describe('all', () => {
             await addOneAppleAndProceedToDeliveryStep(tester);
 
             await tester.testTurn(
-                'U: add pumpkins', TestInput.intent(SingleValueControlIntent.of('Product', { action: Strings.Action.Set, Product: 'pumpkin' })),
+                'U: add pumpkins', TestInput.intent(ValueControlIntent.of('Product', { action: Strings.Action.Set, Product: 'pumpkin' })),
                 'A: How many pumpkins?'
             );
 
             // await tester.testTurn(
-            //     'U: one', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '1' })),
+            //     'U: one', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '1' })),
             //     'A: OK. Added 1 pumpkin. Would you like to add another item?'
             // );
 
@@ -197,7 +197,7 @@ describe('all', () => {
             // );
 
             // await tester.testTurn(
-            //     'U: tuesday', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.DATE, { 'AMAZON.DATE': '2019-01-08' })),
+            //     'U: tuesday', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.DATE, { 'AMAZON.DATE': '2019-01-08' })),
             //     'A: OK delivery will be on 2019-01-08.'
             // );
         });
@@ -267,12 +267,12 @@ describe('all', () => {
             await chooseApples(tester);
 
             await tester.testTurn(
-                'U: two hundred', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '200' })),
+                'U: two hundred', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '200' })),
                 'A: Sorry I can only accept orders of one to one hundred items. How many apples?'
             );
 
             await tester.testTurn(
-                'U: two', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '2' })),
+                'U: two', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '2' })),
                 'A: OK. Added 2 apples. Would you like to add another item?'
             );
         });
@@ -282,7 +282,7 @@ describe('all', () => {
             await chooseApples(tester);
 
             await tester.testTurn(
-                'U: ten', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '10' })),
+                'U: ten', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '10' })),
                 'A: Was that 10?'
             );
 
@@ -297,7 +297,7 @@ describe('all', () => {
             await chooseApples(tester);
 
             await tester.testTurn(
-                'U: ten', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '10' })),
+                'U: ten', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '10' })),
                 'A: Was that 10?'
             );
 
@@ -307,7 +307,7 @@ describe('all', () => {
             );
 
             await tester.testTurn(
-                'U: two', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '2' })),
+                'U: two', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '2' })),
                 'A: OK. Added 2 apples. Would you like to add another item?'
             );
         });
@@ -317,12 +317,12 @@ describe('all', () => {
             await chooseApples(tester);
 
             await tester.testTurn(
-                'U: ten', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '10' })),
+                'U: ten', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '10' })),
                 'A: Was that 10?'
             );
 
             await tester.testTurn(
-                'U: no, two', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { feedback: Strings.Feedback.Disaffirm, 'AMAZON.NUMBER': '2' })),
+                'U: no, two', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { feedback: Strings.Feedback.Disaffirm, 'AMAZON.NUMBER': '2' })),
                 'A: OK. Added 2 apples. Would you like to add another item?'
             );
         });
@@ -332,12 +332,12 @@ describe('all', () => {
             await chooseApples(tester);
 
             await tester.testTurn(
-                'U: ten', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '10' })),
+                'U: ten', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '10' })),
                 'A: Was that 10?'
             );
 
             await tester.testTurn(
-                'U: two', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '2' })),
+                'U: two', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '2' })),
                 'A: OK. Added 2 apples. Would you like to add another item?'
             );
         });
@@ -347,12 +347,12 @@ describe('all', () => {
             await chooseApples(tester);
 
             await tester.testTurn(
-                'U: ten', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '10' })),
+                'U: ten', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '10' })),
                 'A: Was that 10?'
             );
 
             await tester.testTurn(
-                'U: twenty', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '20' })),
+                'U: twenty', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '20' })),
                 'A: Was that 20?'
             );
         });
@@ -380,17 +380,17 @@ describe('all', () => {
             await chooseApples(tester);
 
             await tester.testTurn(
-                'U: two hundred', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '200' })),
+                'U: two hundred', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '200' })),
                 'A: Sorry I can only accept orders of one to one hundred items. How many apples?'
             );
 
             await tester.testTurn(
-                'U: add bananas', TestInput.intent(SingleValueControlIntent.of('Product', { action: Strings.Action.Set, Product: 'banana' })),
+                'U: add bananas', TestInput.intent(ValueControlIntent.of('Product', { action: Strings.Action.Set, Product: 'banana' })),
                 'A: How many bananas?'
             );
 
             await tester.testTurn(
-                'U: two', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '2' })),
+                'U: two', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '2' })),
                 'A: OK. Added 2 bananas. Would you like to add another item?'
             );
         });
@@ -404,11 +404,11 @@ describe('all', () => {
                 'A: Welcome to the fruit shop. What would you like?'
             );
             await tester.testTurn(
-                'U: fruit', TestInput.intent(SingleValueControlIntent.of('Category', { Category: 'fruit' })),
+                'U: fruit', TestInput.intent(ValueControlIntent.of('Category', { Category: 'fruit' })),
                 'A: Some of our favorite fruits are apples, bananas and oranges. Which would you like?'
             );
             await tester.testTurn(
-                'U: carrots', TestInput.intent(SingleValueControlIntent.of('Product', { Product: 'carrot' })),
+                'U: carrots', TestInput.intent(ValueControlIntent.of('Product', { Product: 'carrot' })),
                 'A: How many carrots?'
             );
         });
@@ -460,15 +460,15 @@ describe('all', () => {
                 'A: How many apples?'
             );
             await tester.testTurn(
-                'U: zero', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '0' })),
+                'U: zero', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '0' })),
                 'A: Sorry I can only accept orders of one to one hundred items. How many apples?'
             );
             await tester.testTurn(
-                'U: one', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '1' })),
+                'U: one', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '1' })),
                 'A: OK. Added 1 apple. How many bananas?'
             );
             await tester.testTurn(
-                'U: two', TestInput.intent(SingleValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '2' })),
+                'U: two', TestInput.intent(ValueControlIntent.of(AmazonBuiltInSlotType.NUMBER, { 'AMAZON.NUMBER': '2' })),
                 'A: OK. Added 2 bananas. Would you like to add another item?'
             );
         });

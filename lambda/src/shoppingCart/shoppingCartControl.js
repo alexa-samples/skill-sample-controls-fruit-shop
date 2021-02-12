@@ -58,7 +58,7 @@ class ShoppingCartControl extends ContainerControl {
                 interactionModel: {
                     targets: ['category'],
                     actions: {
-                        set: [Strings.Action.Set, Strings.Action.Select, 'add']
+                        set: [Strings.Action.Set, Strings.Action.Select, Strings.Action.Add]
                     }
                 },
                 prompts: {
@@ -72,7 +72,9 @@ class ShoppingCartControl extends ContainerControl {
                     }
                 },
                 apl: {
-                    requestAPLDocument: generateProductListDocument()
+                    requestValue: {
+                        document: generateProductListDocument(),
+                    }
                 }
             }
         );
@@ -85,7 +87,7 @@ class ShoppingCartControl extends ContainerControl {
                 interactionModel: {
                     targets: ['product'],
                     actions: {
-                        set: [Strings.Action.Set, Strings.Action.Select, 'add']
+                        set: [Strings.Action.Set, Strings.Action.Select, Strings.Action.Add]
                     }
                 },
                 listItemIDs: () => {
@@ -109,7 +111,9 @@ class ShoppingCartControl extends ContainerControl {
                     valueSet: '', //  prompt fragment not required here as the itemCountControl provides implicit confirmation.
                 },
                 apl: {
-                    requestAPLDocument: generateProductListDocument()
+                    requestValue: {
+                        document: generateProductListDocument(),
+                    }
                 }
             }
         );
@@ -388,7 +392,7 @@ class ShoppingCartControl extends ContainerControl {
 
     renderAct(act, input, responseBuilder) {
         if (act instanceof NonUnderstandingAct) {
-            console.log('ShoppingCartControl is handling this specific FallbackIntent / NonUnderstandingAct');
+            log.debug('ShoppingCartControl is handling this specific FallbackIntent / NonUnderstandingAct');
             responseBuilder.addPromptFragment(i18n.t('SHOPPING_CART_CONTROL_NON_UNDERSTANDING'));
             return;
         }

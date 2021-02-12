@@ -11,12 +11,14 @@
  * permissions and limitations under the License.
  */
 
-const { ContainerControl, ContainerControlProps, ControlInput, InputUtil, ControlResultBuilder, LiteralContentAct, NonUnderstandingAct } = require('ask-sdk-controls');
+const { ContainerControl, ContainerControlProps, ControlInput, InputUtil, ControlResultBuilder, LiteralContentAct, NonUnderstandingAct, Logger } = require('ask-sdk-controls');
 
 const { ShoppingCartControl } = require('./shoppingCart/shoppingCartControl');
 const { CheckoutControl } = require('./checkout/checkoutControl');
 
 const { i18n } = require('./i18n');
+
+const log = new Logger('FruitShopJS:FruitShopControl');
 
 /**
  * The root control for the application.
@@ -81,7 +83,7 @@ class FruitShopControl extends ContainerControl {
             this.handleFunc = this.handleHelpIntent;
             return true;
         }
-        console.log('WARN: Nothing wants this input. A new clause may be required.');
+        log.warn('Nothing wants this input. A new clause may be required.');
         return false;
     }
 
@@ -136,7 +138,7 @@ class FruitShopControl extends ContainerControl {
 
     renderAct(act, input, responseBuilder) {
         if (act instanceof NonUnderstandingAct) {
-            console.log('FruitShopControl is handling this specific FallbackIntent / NonUnderstandingAct');
+            log.debug('FruitShopControl is handling this specific FallbackIntent / NonUnderstandingAct');
             responseBuilder.addPromptFragment(i18n.t('FRUIT_SHOP_CONTROL_NON_UNDERSTANDING'));
             return;
         }
