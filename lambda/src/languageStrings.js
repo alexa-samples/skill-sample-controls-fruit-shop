@@ -46,7 +46,7 @@ module.exports = {
             lettuce: 'lettuce',
             lettuce_plural: 'lettuce',
 
-            WELCOME_MSG: 'Welcome to the fruit shop.',
+            WELCOME_MSG: 'Welcome to the fruit shop {{- name}}.',
 
             // FruitShop Control
             FRUIT_SHOP_CONTROL_NON_UNDERSTANDING: 'I didn\'t catch that.',

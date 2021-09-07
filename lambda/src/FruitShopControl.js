@@ -17,6 +17,8 @@ const { ShoppingCartControl } = require('./shoppingCart/shoppingCartControl');
 const { CheckoutControl } = require('./checkout/checkoutControl');
 
 const { i18n } = require('./i18n');
+/* personalization Utility */
+const personalizationUtil = require('./personalizationUtil')
 
 /**
  * The root control for the application.
@@ -98,7 +100,9 @@ class FruitShopControl extends ContainerControl {
     }
 
     async handleLaunchRequest(input, resultBuilder) {
-        resultBuilder.addAct(new LiteralContentAct(this, { promptFragment: i18n.t('WELCOME_MSG') }));
+        const name = personalizationUtil.getPersonalizedPrompt(input.handlerInput);
+        resultBuilder.addAct(new LiteralContentAct(this, { promptFragment: i18n.t('WELCOME_MSG', { name }) }));
+
     }
 
     async handleSessionEndedRequest(input, resultBuilder) {
@@ -114,7 +118,9 @@ class FruitShopControl extends ContainerControl {
     }
 
     async handleHelpIntent(input, resultBuilder) {
-        resultBuilder.addAct(new LiteralContentAct(this, { promptFragment: i18n.t('WELCOME_MSG') }));
+        const name = personalizationUtil.getPersonalizedPrompt(input.handlerInput);
+        resultBuilder.addAct(new LiteralContentAct(this, { promptFragment: i18n.t('WELCOME_MSG', { name }) }));
+
     }
 
     async handleFallbackIntent(input, resultBuilder) {
