@@ -13,7 +13,7 @@
         "ask-sdk-model": "^1.28.0",
         "ask-sdk-controls": "^0.2.0",
         "i18next": "^15.0.5",
-        "lodash": "^4.17.15"
+        "lodash": "^4.17.21"
     },
     "devDependencies": {
         "@types/chai": "^4.2.8",
